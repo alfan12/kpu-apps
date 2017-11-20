@@ -8,8 +8,8 @@
 		else{
 			$username	=	$_POST['username'];
 			$password	=	$_POST['password'];
-		
-			include 'koneksi.php';
+
+			include '../koneksi.php';
 			$query = mysql_query("SELECT * FROM admin WHERE password='$password' AND username='$username'");
 			$rows = mysql_num_rows($query);
 			if ($rows == 1) {
